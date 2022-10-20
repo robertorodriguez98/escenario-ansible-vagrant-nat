@@ -1,0 +1,1 @@
+# escenario-ansible-vagrant-nat
