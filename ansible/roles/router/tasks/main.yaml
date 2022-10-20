@@ -1,0 +1,7 @@
+# Cambia el bit de forward a 1
+- ansible.posix.sysctl:
+    name: net.ipv4.ip_forward
+    value: '1'
+    sysctl_set: yes
+    state: present
+    reload: yes
