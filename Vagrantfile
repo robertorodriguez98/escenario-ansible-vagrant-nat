@@ -11,8 +11,8 @@ Vagrant.configure("2") do |config|
     router.vm.network :private_network,
       :libvirt__network_name => "red-muy-aislada",
       :libvirt__dhcp_enabled => false,
-      :ip => "192.168.0.1",
-      :libvirt__forward_mode => "veryisolated"    
+      :ip => "10.0.0.1",
+      :libvirt__forward_mode => "veryisolated" 
   end 
   config.vm.define :cliente do |cliente|
     cliente.vm.box = "debian/bullseye64"
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     cliente.vm.network :private_network,
       :libvirt__network_name => "red-muy-aislada",
       :libvirt__dhcp_enabled => false,
-      :ip => "192.168.0.2",
+      :ip => "10.0.0.2",
       :libvirt__forward_mode => "veryisolated"
   end
 end

@@ -1,7 +1,7 @@
 - hosts: all
   become: true
   roles:
-   - role: commons
+   - role: common
 
 - hosts: router
   become: true
