@@ -6,7 +6,7 @@
     state: present
     reload: yes
 
-- name: Configuracion de DNAT
+- name: Configuracion de DNAT (puerto 80)
   iptables:
     chain: PREROUTING
     in_interface: eth1
@@ -16,3 +16,4 @@
     table: nat
     to_destination: 10.0.0.2:80
   become: yes
+
