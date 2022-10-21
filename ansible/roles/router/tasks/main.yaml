@@ -17,3 +17,11 @@
     to_destination: 10.0.0.2:80
   become: yes
 
+- name: Configuracion de SNAT
+  iptables:
+    chain: POSTROUTING
+    destination: 10.0.0.0/8
+    jump: MASQUERADE
+    out_interface: eth1
+    table: nat
+  become: yes
